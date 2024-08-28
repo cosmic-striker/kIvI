@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MR.kIvI</title>
+    <title>MR.kIwI</title>
 
-    <!-- Link to your CSS file in the static directory -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="style.css">
     <link
-        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-        rel="stylesheet">
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet">
 
-    <!-- Font links -->
+    <!-- font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -19,44 +18,71 @@
 <body>
     <header>
         <div class="heading-container">
-            <!-- Corrected the URL for the image -->
-            <img src="{{ url_for('static', filename='images/2.jpeg') }}" alt="Logo" class="logo">
-            <h1>MR.kIvI</h1>
+            <img src="2.jpeg" alt="Logo" class="logo">
+            <h1>kIwI</h1>
         </div>
-        <div class="background-container">
-            <!-- Background content -->
+        <div class="background-container">  
         </div>
 
-        <a href="#" class="logo"></a>
+        <a href="#" class ="logo"></a>
+        
     </header>
-
     <section id="home" class="hero">
         <div class="hero-text">
-            <h4>Welcome to MR.kIvI a LLM module</h4>
+            <h5>#2 Trending</h5>
+            <h4>Welcome to Our Virtual Assistant</h4>
             <h1>kIwI The Chatbot</h1>
             <p>
                 "Chat with us for instant guidance, get answers fast with our smart
-                chatbot, ask anything anytime,
+                chatbot, ask anything anytime,   
                 <br>
                 and simplify your experience with our AI assistant."
             </p>
-            <a href="#">TALK TO Me</a>
+            <a href="#">TALK TO Me</a>     
             <a href="#" class="ctaa">Get info</a>
         </div>
-
+        
         <div class="icons">
             <a href="#"><i class="ri-instagram-line"></i></a>
             <a href="#"><i class="ri-youtube-line"></i></a>
             <a href="#"><i class="ri-dribbble-line"></i></a>
         </div>
     </section>
+    
+    <div id="background-overlay" class="background-overlay"></div>
 
+    <!-- Chatbot Button -->
+    <button class="chatbot-button" onclick="toggleChatbot()">
+        <img src="https://i.pinimg.com/564x/f1/6f/b7/f16fb7e49d76ac545cd9687529e2e1ab.jpg" alt="Chat Logo" class="chatbot-logo">
+    </button>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="chatbot-container">
+         <div class="chatbot-header">
+         <h2>Chat with us!</h2>
+            <button class="close-chatbot" onclick="toggleChatbot()">×</button>
+    </div>
+        <div class="chatbot-body">
+            <div class="chat-messages">
+                <p>Hello! How can I assist you today?</p>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message..." id="chat-input-field">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 
     <button class="circle-button">
         <img src="https://i.pinimg.com/564x/f1/6f/b7/f16fb7e49d76ac545cd9687529e2e1ab.jpg" alt="Button Image">
     </button>
-
-    <!-- Scroll effect and JavaScript -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+     -->
+    
+     <!-- scrolleffect link -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+  
+    <script src="index.js"></script>
 </body>
 </html>
