@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KnappIT-Mobile App Development Company | KnappIT</title>
 
-    <link rel="stylesheet" href="kiwi/frontend/static/styles.css">
+    <!-- Link to your CSS file in the static directory -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet">
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet">
 
-    <!-- font link -->
+    <!-- Font links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -18,17 +19,17 @@
 <body>
     <header>
         <div class="heading-container">
-            <img src="kiwi/frontend/images/2.jpeg" alt="Logo" class="logo">
+            <!-- Corrected the URL for the image -->
+            <img src="{{ url_for('static', filename='images/2.jpeg') }}" alt="Logo" class="logo">
             <h1>kIwI</h1>
         </div>
         <div class="background-container">
-            
+            <!-- Background content -->
         </div>
-        
-        
-        <a href="#" class ="logo"></a>
-        
+
+        <a href="#" class="logo"></a>
     </header>
+
     <section id="home" class="hero">
         <div class="hero-text">
             <h5>#2 Trending</h5>
@@ -36,16 +37,14 @@
             <h1>kIwI The Chatbot</h1>
             <p>
                 "Chat with us for instant guidance, get answers fast with our smart
-                chatbot, ask anything anytime,   
+                chatbot, ask anything anytime,
                 <br>
                 and simplify your experience with our AI assistant."
             </p>
-            <a href="#">TALK TO Me</a>     
+            <a href="#">TALK TO Me</a>
             <a href="#" class="ctaa">Get info</a>
         </div>
-        <div class="hero-img">
-            <img src="2.pg" alt="">
-        </div>
+
         <div class="icons">
             <a href="#"><i class="ri-instagram-line"></i></a>
             <a href="#"><i class="ri-youtube-line"></i></a>
@@ -53,15 +52,12 @@
         </div>
     </section>
 
-
     <button class="circle-button">
         <img src="https://i.pinimg.com/564x/f1/6f/b7/f16fb7e49d76ac545cd9687529e2e1ab.jpg" alt="Button Image">
     </button>
-    
-    
-     <!-- scrolleffect link -->
-     <script src="https://unpkg.com/scrollreveal"></script>
-  
-    <script src="kiwi/frontend/static/scripts.js"></script>
+
+    <!-- Scroll effect and JavaScript -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
