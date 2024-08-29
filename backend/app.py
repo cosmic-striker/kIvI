@@ -4,7 +4,7 @@ from model.llama2_model import LLaMA2Model
 app = Flask(__name__)
 
 # Initialize the LLaMA 2 model
-model = LLaMA2Model()
+model = LLaMA2Model(model_path="model/llama2/")
 
 # Route for the main page
 @app.route('/')
@@ -15,6 +15,7 @@ def index():
 @app.route('/chat', methods=['POST'])
 def chat():
     user_input = request.json.get('message')
+    
     if not user_input:
         return jsonify({'error': 'No input provided'}), 400
     
