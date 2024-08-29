@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KnappIT-Mobile App Development Company | KnappIT</title>
+    <title>MR.kIwI</title>
 
-    <link rel="stylesheet" href="kiwi/frontend/static/styles.css">
+    <link rel="stylesheet" href="style.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet">
@@ -18,14 +18,12 @@
 <body>
     <header>
         <div class="heading-container">
-            <img src="kiwi/frontend/images/2.jpeg" alt="Logo" class="logo">
+            <img src="2.jpeg" alt="Logo" class="logo">
             <h1>kIwI</h1>
         </div>
-        <div class="background-container">
-            
+        <div class="background-container">  
         </div>
-        
-        
+
         <a href="#" class ="logo"></a>
         
     </header>
@@ -43,25 +41,48 @@
             <a href="#">TALK TO Me</a>     
             <a href="#" class="ctaa">Get info</a>
         </div>
-        <div class="hero-img">
-            <img src="2.pg" alt="">
-        </div>
+        
         <div class="icons">
             <a href="#"><i class="ri-instagram-line"></i></a>
             <a href="#"><i class="ri-youtube-line"></i></a>
             <a href="#"><i class="ri-dribbble-line"></i></a>
         </div>
     </section>
+    
+    <div id="background-overlay" class="background-overlay"></div>
+
+    <!-- Chatbot Button -->
+    <button class="chatbot-button" onclick="toggleChatbot()">
+        <img src="https://i.pinimg.com/564x/f1/6f/b7/f16fb7e49d76ac545cd9687529e2e1ab.jpg" alt="Chat Logo" class="chatbot-logo">
+    </button>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="chatbot-container">
+         <div class="chatbot-header">
+         <h2>Chat with us!</h2>
+            <button class="close-chatbot" onclick="toggleChatbot()">×</button>
+    </div>
+        <div class="chatbot-body">
+            <div class="chat-messages">
+                <p>Hello! How can I assist you today?</p>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message..." id="chat-input-field">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
 
 
+    <!-- 
     <button class="circle-button">
         <img src="https://i.pinimg.com/564x/f1/6f/b7/f16fb7e49d76ac545cd9687529e2e1ab.jpg" alt="Button Image">
     </button>
-    
+     -->
     
      <!-- scrolleffect link -->
      <script src="https://unpkg.com/scrollreveal"></script>
   
-    <script src="kiwi/frontend/static/scripts.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
