@@ -245,8 +245,11 @@ h1 {
     display: none;
     flex-direction: column;
     z-index: 1000;
+    
 }
-
+.chatbot-header h1{
+    margin-left: 20px;
+}
 /* Header of the chatbot */
 .chatbot-header {
     padding: 10px;
@@ -256,6 +259,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     border-radius: 10px 10px 0 0;
+
 }
 
 /* Close button in the header */
@@ -283,7 +287,7 @@ h1 {
 }
 
 /* Chat input area */
-.chat-input {
+.chat-footer {
     display: flex;
     padding: 10px;
     border-top: 1px solid #ddd;
@@ -291,14 +295,30 @@ h1 {
     border-radius: 10px;
 }
 
-.chat-input input {
+.chat-footer input {
     flex: 1;
     padding: 8px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 20px;
 }
 
-.chat-input button {
+.chat-footer button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background: #000000;
+    color: white;
+    cursor: pointer;
+}
+
+.chat-footer button:hover {
+    background: #333333;
+} 
+
+
+/* Send Button */
+.send-button {
     margin-left: 10px;
     padding: 8px 16px;
     border: none;
@@ -308,8 +328,38 @@ h1 {
     cursor: pointer;
 }
 
-.chat-input button:hover {
+.send-button:hover {
     background: #333333;
+}
+
+/* Speaker Button */
+.speaker-button {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    background: #000000; 
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    position: absolute;
+    top: 5px; 
+    right: 50px; 
+}
+
+.speaker-button:hover {
+    transform: scale(1.1); 
+}
+
+/* Speaker Icon */
+.speaker-icon {
+    width: 24px;
+    height: 24px; 
+    object-fit: contain; 
+    align-items: center;
 }
 
 
@@ -362,4 +412,37 @@ h1 {
         margin-bottom: 25px;
         font-size: 20px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Individual Chat Message */
+.chat-message {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    max-width: 80%; 
+    word-wrap: break-word;
+}
+
+/* User's Message */
+.chat-message.user {
+    background-color: #0f804d; 
+    align-self: flex-end; 
+}
+
+/* Bot's Message */
+.chat-message.bot {
+    background-color:aqua; 
+    align-self: flex-start;
 }
