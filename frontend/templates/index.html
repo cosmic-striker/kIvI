@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MR.kIwI</title>
-
     <link rel="stylesheet" href="style.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet">
-
+    rel="stylesheet">   
     <!-- font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +21,7 @@
         </div>
         <div class="background-container">  
         </div>
-
         <a href="#" class ="logo"></a>
-        
     </header>
     <section id="home" class="hero">
         <div class="hero-text">
@@ -48,41 +44,43 @@
             <a href="#"><i class="ri-dribbble-line"></i></a>
         </div>
     </section>
-    
     <div id="background-overlay" class="background-overlay"></div>
-
-    <!-- Chatbot Button -->
-    <button class="chatbot-button" onclick="toggleChatbot()">
-        <img src="https://i.pinimg.com/564x/f1/6f/b7/f16fb7e49d76ac545cd9687529e2e1ab.jpg" alt="Chat Logo" class="chatbot-logo">
-    </button>
-
-    <!-- Chatbot Container -->
-    <div id="chatbot-container" class="chatbot-container">
-         <div class="chatbot-header">
-         <h2>Chat with us!</h2>
-            <button class="close-chatbot" onclick="toggleChatbot()">×</button>
-    </div>
-        <div class="chatbot-body">
-            <div class="chat-messages">
-                <p>Hello! How can I assist you today?</p>
-            </div>
-            <div class="chat-input">
-                <input type="text" placeholder="Type your message..." id="chat-input-field">
-                <button onclick="sendMessage()">Send</button>
-            </div>
-        </div>
-    </div>
-
-
     <!-- 
     <button class="circle-button">
         <img src="https://i.pinimg.com/564x/f1/6f/b7/f16fb7e49d76ac545cd9687529e2e1ab.jpg" alt="Button Image">
     </button>
      -->
     
+     <!-- Chatbot Button -->
+    <button class="chatbot-button" onclick="toggleChatbot()">
+        <img src="https://i.pinimg.com/564x/f1/6f/b7/f16fb7e49d76ac545cd9687529e2e1ab.jpg" alt="Chat Logo" class="chatbot-logo">
+    </button>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+        <h2>Chat with us!</h2>
+    <!-- Speaker Button -->
+    <button class="speaker-button" onclick="speakChatMessages()">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwjc8NNkpNJzs6oHLd9YTo08v00J_Bc8x7JQ&s" alt="Speak" class="speaker-icon">
+    </button>
+    <button class="close-chatbot" onclick="toggleChatbot()">×</button>
+    </div>
+        <div class="chatbot-body">
+            <div class="chat-messages" id="chat-messages">
+                <div class="chat-message bot">Hello! How can I assist you today?</div>
+                
+            </div>
+            <div class="chat-footer">
+                    <input type="text" placeholder="Type your message..." id="chat-input-field">
+                    <button class="send-button" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
      <!-- scrolleffect link -->
-     <script src="https://unpkg.com/scrollreveal"></script>
-  
-    <script src="index.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="index.js"></script>
 </body>
 </html>
